@@ -3,26 +3,76 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/nav_dashboard">
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="app.truledgr.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
-        <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
-    </fragment>
+        android:id="@+id/nav_dashboard"
+        android:name="app.truledgr.DashboardFragment"
+        android:label="Dashboard"
+        tools:layout="@layout/fragment_dashboard" />
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="app.truledgr.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
-        <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
-    </fragment>
+        android:id="@+id/nav_accounts"
+        android:name="app.truledgr.AccountsFragment"
+        android:label="Accounts"
+        tools:layout="@layout/fragment_accounts" />
+    <fragment
+        android:id="@+id/nav_transactions"
+        android:name="app.truledgr.TransactionsFragment"
+        android:label="Transactions"
+        tools:layout="@layout/fragment_transactions" />
+    <fragment
+        android:id="@+id/nav_cash_flow"
+        android:name="app.truledgr.CashFlowFragment"
+        android:label="Cash Flow"
+        tools:layout="@layout/fragment_cash_flow" />
+    <fragment
+        android:id="@+id/nav_budget"
+        android:name="app.truledgr.BudgetFragment"
+        android:label="Budget"
+        tools:layout="@layout/fragment_budget" />
+    <fragment
+        android:id="@+id/nav_recurring"
+        android:name="app.truledgr.RecurringFragment"
+        android:label="Recurring"
+        tools:layout="@layout/fragment_recurring" />
+    <fragment
+        android:id="@+id/nav_goals"
+        android:name="app.truledgr.GoalsFragment"
+        android:label="Goals"
+        tools:layout="@layout/fragment_goals" />
+    <fragment
+        android:id="@+id/nav_investments"
+        android:name="app.truledgr.InvestmentsFragment"
+        android:label="Investments"
+        tools:layout="@layout/fragment_investments" />
+    <fragment
+        android:id="@+id/nav_members"
+        android:name="app.truledgr.MembersFragment"
+        android:label="Members"
+        tools:layout="@layout/fragment_members" />
+    <fragment
+        android:id="@+id/nav_institutions"
+        android:name="app.truledgr.InstitutionsFragment"
+        android:label="Institutions"
+        tools:layout="@layout/fragment_institutions" />
+    <fragment
+        android:id="@+id/nav_categories"
+        android:name="app.truledgr.CategoriesFragment"
+        android:label="Categories"
+        tools:layout="@layout/fragment_categories" />
+    <fragment
+        android:id="@+id/nav_preferences"
+        android:name="app.truledgr.PreferencesFragment"
+        android:label="Preferences"
+        tools:layout="@layout/fragment_preferences" />
+    <fragment
+        android:id="@+id/nav_rules"
+        android:name="app.truledgr.RulesFragment"
+        android:label="Rules"
+        tools:layout="@layout/fragment_rules" />
+    <fragment
+        android:id="@+id/nav_merchants"
+        android:name="app.truledgr.MerchantsFragment"
+        android:label="Merchants"
+        tools:layout="@layout/fragment_merchants" />
 </navigation>

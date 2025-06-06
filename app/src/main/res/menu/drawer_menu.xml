@@ -1,0 +1,18 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <group android:checkableBehavior="single">
+        <item android:id="@+id/nav_dashboard" android:title="Dashboard" android:icon="@drawable/ic_dashboard" />
+        <item android:id="@+id/nav_accounts" android:title="Accounts" android:icon="@drawable/ic_account_balance" />
+        <item android:id="@+id/nav_transactions" android:title="Transactions" android:icon="@drawable/ic_swap_horiz" />
+        <item android:id="@+id/nav_cash_flow" android:title="Cash Flow" android:icon="@drawable/ic_trending_up" />
+        <item android:id="@+id/nav_budget" android:title="Budget" android:icon="@drawable/ic_pie_chart" />
+        <item android:id="@+id/nav_recurring" android:title="Recurring" android:icon="@drawable/ic_repeat" />
+        <item android:id="@+id/nav_goals" android:title="Goals" android:icon="@drawable/ic_flag" />
+        <item android:id="@+id/nav_investments" android:title="Investments" android:icon="@drawable/ic_trending_up" />
+        <item android:id="@+id/nav_members" android:title="Members" android:icon="@drawable/ic_group" />
+        <item android:id="@+id/nav_institutions" android:title="Institutions" android:icon="@drawable/ic_account_balance_wallet" />
+        <item android:id="@+id/nav_categories" android:title="Categories" android:icon="@drawable/ic_category" />
+        <item android:id="@+id/nav_preferences" android:title="Preferences" android:icon="@drawable/ic_settings" />
+        <item android:id="@+id/nav_rules" android:title="Rules" android:icon="@drawable/ic_gavel" />
+        <item android:id="@+id/nav_merchants" android:title="Merchants" android:icon="@drawable/ic_store" />
+    </group>
+</menu>

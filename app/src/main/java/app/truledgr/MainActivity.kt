@@ -10,6 +10,10 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import android.view.Menu
 import android.view.MenuItem
 import app.truledgr.databinding.ActivityMainBinding
+import androidx.drawerlayout.widget.DrawerLayout
+import com.google.android.material.navigation.NavigationView
+import com.google.android.material.bottomnavigation.BottomNavigationView
+import androidx.core.view.GravityCompat
 
 class MainActivity : AppCompatActivity() {
 
@@ -24,14 +28,26 @@ class MainActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.toolbar)
 
+        val drawerLayout = findViewById<DrawerLayout>(R.id.drawer_layout)
+        val navView = findViewById<NavigationView>(R.id.nav_view)
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav)
         val navController = findNavController(R.id.nav_host_fragment_content_main)
-        appBarConfiguration = AppBarConfiguration(navController.graph)
+        appBarConfiguration = AppBarConfiguration(
+            setOf(
+                R.id.nav_dashboard, R.id.nav_accounts, R.id.nav_transactions, R.id.nav_budget, R.id.nav_preferences
+            ), drawerLayout
+        )
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        binding.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null)
-                .setAnchorView(R.id.fab).show()
+        navView.setNavigationItemSelectedListener { menuItem ->
+            navController.navigate(menuItem.itemId)
+            drawerLayout.closeDrawer(GravityCompat.START)
+            true
+        }
+
+        bottomNav.setOnItemSelectedListener { menuItem ->
+            navController.navigate(menuItem.itemId)
+            true
         }
     }
 

@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
 import app.truledgr.databinding.FragmentFirstBinding
 
 /**
@@ -32,9 +31,8 @@ class FirstFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        binding.buttonFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_FirstFragment_to_SecondFragment)
-        }
+        // Remove navigation to action_FirstFragment_to_SecondFragment since nav_graph.xml no longer defines it
+        // If you want to navigate to another fragment, use the new fragment IDs from nav_graph.xml
     }
 
     override fun onDestroyView() {
